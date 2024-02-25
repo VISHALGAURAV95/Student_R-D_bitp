@@ -5,3 +5,31 @@
 .nav-link:hover {
   text-decoration: underline;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.typewriter span {
+  display: inline-block;
+  animation: typewriter 5s linear;
+}
+
+
+
