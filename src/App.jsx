@@ -6,19 +6,21 @@ import Home from './components/Home';
 import About from './components/About';
 import Programs from './components/Programs';
 import Footer from './components/Footer';
-
+import EventDetail from './components/EventDetail';
 function App() {
   return (
     <Router>
       <div className="flex flex-col h-screen">
         <Header />
-        {/* <Navigation /> */}
+         {/* <Navigation />  */}
 
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/events/:id" element={<EventDetail />} />
+
             {/* Add more routes as needed */}
           </Routes>
         </div>

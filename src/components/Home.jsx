@@ -34,25 +34,9 @@ function Home() {
           </p>
         </div>
 
-        {/* Introduction to the Cell */}
-        <div className="my-8">
-          <h3 className="text-2xl font-bold mb-4">Introduction to the Cell</h3>
-          <p className="text-lg">
-             Student Research and Development Cell, its mission,
-            and its role in fostering research and development activities among students.
-          </p>
-        </div>
+        
 
-        {/* Meet the Team */}
-        <div className="my-8">
-          <h3 className="text-2xl font-bold mb-4">Meet the Team</h3>
-          {/* Add team members' information, photos, etc. */}
-          <ul>
-          <li>Faculty Advisors: Nilay Pandey</li>
-          <li>Researchers: Vishal Gaurav</li>
-          <li>Student Leaders: Vaibhav Raj</li>
-        </ul>
-        </div>
+        
 
         {/* Additional Sections (Add more sections based on your needs) */}
       </div>
