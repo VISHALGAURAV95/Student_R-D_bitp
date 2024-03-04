@@ -1,3 +1,4 @@
+import khusipic from "../assets/khusi_img.jpg"
 function TeamMember({ name, branch, position, photo, children }) {
   return (
     <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-4 transition-transform duration-300 transform hover:scale-105">
@@ -60,7 +61,7 @@ function AboutDetail() {
             <div className="flex justify-center">
               <div>
                 <TeamMember name="Gauri Sinha" position="Founder" photo="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1200">
-                  <TeamMember name="David Miller" position="Finance Manager" photo="https://images.pexels.com/photos/1370750/pexels-photo-1370750.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+                  <TeamMember name="Khusi Pathak" position="Finance Manager" photo={khusipic} />
                 </TeamMember>
               </div>
             </div>

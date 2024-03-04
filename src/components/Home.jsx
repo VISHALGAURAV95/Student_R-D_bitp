@@ -1,13 +1,14 @@
 import React from 'react';
 // Make sure to import the styles.css file
 import EventCard from './EventCard'; // Import the EventCard component
+import ResearchOpportunities from './ResearchOpportunities';
 
 // Home Component
 function Home() {
   // Example event data (replace with your actual event data)
   const events = [
-    { title: "Event 1", date: "Date 1" },
-    { title: "Event 2", date: "Date 2" },
+    { title: "Event 1", date: "Date 1" ,id:"1"},
+    { title: "Event 2", date: "Date 2" ,id:'2'},
     // Add more events as needed
   ];
 
@@ -34,6 +35,9 @@ function Home() {
           </p>
         </div>
 
+        {/* using api i will create using open api key for generating the latest resarch oppurtunites
+         */}
+         <ResearchOpportunities/>
         
 
         
