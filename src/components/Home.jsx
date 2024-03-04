@@ -1,7 +1,7 @@
 import React from 'react';
 // Make sure to import the styles.css file
 import EventCard from './EventCard'; // Import the EventCard component
-import ResearchOpportunities from './ResearchOpportunities';
+// import ResearchOpportunities from './ResearchOpportunities';
 
 // Home Component
 function Home() {
