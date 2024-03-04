@@ -37,7 +37,7 @@ function Home() {
 
         {/* using api i will create using open api key for generating the latest resarch oppurtunites
          */}
-         <ResearchOpportunities/>
+         {/* <ResearchOpportunities/> */}
         
 
         

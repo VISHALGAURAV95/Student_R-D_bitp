@@ -12,7 +12,7 @@ function ResearchOpportunities() {
 
     try {
       const response = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
+        '',
         {
           model: 'gpt-3.5',
           messages: [{ role: 'user', content: 'Generate latest research opportunities pointwise' }],
@@ -21,10 +21,10 @@ function ResearchOpportunities() {
           top_p: 1
         },
         {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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' // Replace with your OpenAI API key
-          }
+          // headers: {
+          //   'Content-Type': 'application/json',
+          //   'Authorization': 'Bearer enter new api key' // Replace with your OpenAI API key
+          // }
         }
       );
 
