@@ -24,11 +24,19 @@
   overflow: hidden;
   white-space: nowrap;
   vertical-align: bottom;
+  display: inline-block;
+  max-width: 100%; /* Ensure the typewriter does not overflow its container */
 }
 
 .typewriter span {
   display: inline-block;
-  animation: typewriter 5s linear;
+  animation: typewriter 5s linear; /* Repeat the animation infinitely */
+}
+
+@media screen and (max-width: 768px) {
+  .typewriter {
+      font-size: 16px; /* Adjust font size for better readability on mobile */
+  }
 }
 
 

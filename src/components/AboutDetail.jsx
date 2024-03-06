@@ -1,32 +1,37 @@
-import khusipic from "../assets/khusi_img.jpg"
+import khusipic from "../assets/khusipic.jpg";
+import diveshpic from "../assets/diveshpic.jpg";
+import soumyapic from "../assets/soumyapic.jpg";
+import vaibhavpic from "../assets/vaibhavpic.jpg";
+import vishalpic from "../assets/vishalpic.jpg";
+import vaishnavipic from "../assets/vaishnavipic.jpg";
+
 function TeamMember({ name, branch, position, photo, children }) {
   return (
-    <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-4 transition-transform duration-300 transform hover:scale-105">
+    <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-4">
       {/* Display the team member's photo */}
-      <div className="bg-gray-200 rounded-full h-24 w-24 flex items-center justify-center mb-2">
+      <div className="bg-gray-200 rounded-full h-20 w-20 md:h-32 md:w-32 flex items-center justify-center mb-2">
         {/* Placeholder for the team member's photo */}
         {photo ? (
           <img src={photo} alt={name} className="rounded-full w-full h-full object-cover" />
         ) : (
-          <span className="text-xl font-bold">{name} pic </span>
+          <span className="text-xl font-bold">{name} pic</span>
         )}
       </div>
       <div className="text-center">
         {/* Display the team member's name */}
-        <h2 className="text-lg font-semibold">{name}</h2>
+        <h2 className="text-lg font-semibold md:text-xl">{name}</h2>
         {/* Display the team member's branch */}
-        <h2 className="text-lg font-semibold">{branch}</h2>
+        <h2 className="text-lg font-semibold md:text-xl">{branch}</h2>
         {/* Display the team member's position */}
         <p className="text-gray-400">{position}</p>
       </div>
-      <div className="mt-4 flex justify-evenly space-x-4 w-full"> {/* Adjusted to center child rows */}
+      <div className="mt-4 flex justify-evenly space-x-4 w-full">
         {/* If the team member has children (nested team members), render them */}
         {children}
       </div>
     </div>
   );
 }
-
 
 function AboutDetail() {
   return (
@@ -42,17 +47,17 @@ function AboutDetail() {
             {/* First child column */}
             <div className="flex justify-between">
               <div>
-                <TeamMember name="Vaibhav Raj" position="Founder" photo="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1200">
-                  <TeamMember name="Michael Brown" position="Design Lead" photo="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+                <TeamMember name="Vaibhav Raj" position="Founder" photo={vaibhavpic}>
+                  <TeamMember name="Divesh Kumar" position="Design Lead" photo={diveshpic} />
                 </TeamMember>
               </div>
             </div>
             {/* Second child column */}
             <div className="flex justify-center">
               <div>
-                <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" photo="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1200">
-                  <TeamMember name="Sarah Wilson" position="HR Manager" photo="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=1200">
-                    <TeamMember name="Olivia Taylor" position="Customer Support" photo="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+                <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" photo={vishalpic}>
+                  <TeamMember name="Soumya" position="HR Manager" photo={soumyapic}>
+                    <TeamMember name="Vaishnavi" position="Customer Support" photo={vaishnavipic} />
                   </TeamMember>
                 </TeamMember>
               </div>
@@ -71,4 +76,5 @@ function AboutDetail() {
     </div>
   );
 }
+
 export default AboutDetail;
