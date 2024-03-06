@@ -8,7 +8,7 @@ function TeamMember({ name, branch, position, photo, children }) {
         {photo ? (
           <img src={photo} alt={name} className="rounded-full w-full h-full object-cover" />
         ) : (
-          <span className="text-xl font-bold">{name} pic</span>
+          <span className="text-xl font-bold">{name} pic </span>
         )}
       </div>
       <div className="text-center">
