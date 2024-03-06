@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 768px) {
   .typewriter {
-      font-size: 12px; /* Adjust font size for better readability on mobile */
+      font-size: 13px; /* Adjust font size for better readability on mobile */
   }
 }
 
