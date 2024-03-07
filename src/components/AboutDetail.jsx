@@ -1,10 +1,12 @@
 import khusipic from "../assets/khusipic.jpg";
 import diveshpic from "../assets/diveshpic.jpg";
-import soumyapic from "../assets/soumyapic.jpg";
+import soumyapic from "../assets/saumyapic2.jpg";
 import vaibhavpic from "../assets/vaibhavpic.jpg";
 import vishalpic from "../assets/vishalpic.jpg";
 import vaishnavipic from "../assets/vaishnavipic.jpg";
-
+import karanpic from "../assets/karanpic.jpg";
+import gauripic from "../assets/gauripic.jpg";
+import amanpic from "../assets/amanpic2.jpg";
 function TeamMember({ name, branch, position, photo, children }) {
   return (
     <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-2">
@@ -47,17 +49,20 @@ function AboutDetail() {
             {/* First child column */}
             <div className="flex justify-between">
               <div>
-                <TeamMember name="Vaibhav Raj" position="Founder" photo={vaibhavpic}>
-                  <TeamMember name="Divesh Kumar" position="Design Lead" photo={diveshpic} />
+                <TeamMember name="Vaibhav Raj" position="Founder || Design Lead" branch="CSE" photo={vaibhavpic}>
+                  {/* <TeamMember name="Divesh Kumar" position="PR and Outreach" photo={diveshpic} /> */}
+                  <TeamMember name="Karan Kumar" position="Event Head" branch="IT" photo={karanpic}>
+                  <TeamMember name="Divyesh Kumar" position="PR & Outreach" branch="CSE" photo={diveshpic} />
+                  </TeamMember>
                 </TeamMember>
               </div>
             </div>
             {/* Second child column */}
             <div className="flex justify-center">
               <div>
-                <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" photo={vishalpic}>
-                  <TeamMember name="Soumya" position="HR Manager" photo={soumyapic}>
-                    <TeamMember name="Vaishnavi" position="Customer Support" photo={vaishnavipic} />
+                <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" branch="CSE" photo={vishalpic}>
+                  <TeamMember name="Khushi Pathak" position="Event Head" branch="IT" photo={khusipic}>
+                    <TeamMember name="Vaishnavi Raj" position="PR & Outreach" branch="IT" photo={vaishnavipic} />
                   </TeamMember>
                 </TeamMember>
               </div>
@@ -65,8 +70,10 @@ function AboutDetail() {
             {/* Third child column */}
             <div className="flex justify-center">
               <div>
-                <TeamMember name="Gauri Sinha" position="Founder" photo="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1200">
-                  <TeamMember name="Khusi Pathak" position="Finance Manager" photo={khusipic} />
+                <TeamMember name="Gauri Sinha" position="Founder || Design Lead" branch="ECE" photo={gauripic}>
+                  <TeamMember name="Aman Kumar" position="Event Head" branch="BBA" photo={amanpic} >  
+                  <TeamMember name="Soumya Shalini" position="PR & Outreach" branch="EEE" photo={soumyapic}/> 
+                  </TeamMember>
                 </TeamMember>
               </div>
             </div>
