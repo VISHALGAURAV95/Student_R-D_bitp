@@ -7,6 +7,7 @@ import vaishnavipic from "../assets/vaishnavipic.jpg";
 import karanpic from "../assets/karanpic.jpg";
 import gauripic from "../assets/gauripic.jpg";
 import amanpic from "../assets/amanpic2.jpg";
+import scpandeypic from "../assets/scpandeypic.jpg";
 function TeamMember({ name, branch, position, photo, children }) {
   return (
     <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-2">
@@ -45,7 +46,7 @@ function AboutDetail() {
         {/* Grid layout to display team members */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-x-4 gap-y-4">
           {/* Root TeamMember */}
-          <TeamMember name="S.C. Pandey" branch="CSE" position="Professor" photo="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1200">
+          <TeamMember name="S.C. Pandey" branch="CSE" position="Professor incharge R & D Cell" photo={scpandeypic}>
             {/* First child column */}
             <div className="flex justify-between">
               <div>
