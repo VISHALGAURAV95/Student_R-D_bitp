@@ -9,7 +9,8 @@ import gauripic from "../assets/gauripic.jpg";
 import amanpic from "../assets/amanpic2.jpg";
 import madhupic from "../assets/madhu.jpg";
 import harshpic from "../assets/Harsh_2.jpg";
-import scpandeypic from "../assets/scpandeypic.jpg"
+import scpandeypic from "../assets/scpandeypic.jpg";
+import akashpic from "../assets/akashpic.jpg";
 function TeamMember({ name, branch, position, photo, children }) {
   return (
     <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-2">
@@ -67,7 +68,9 @@ function AboutDetail() {
               <div>
                 <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" branch="CSE" photo={vishalpic}>
                   <TeamMember name="Khushi Pathak" position="Event Head" branch="IT" photo={khusipic}>
-                    <TeamMember name="HARSH Raj" position="CONTENT HEAD" branch="CSE" photo={harshpic} />
+                    <TeamMember name="HARSH Raj" position="CONTENT HEAD" branch="CSE" photo={harshpic} >
+                    <TeamMember name="AKASH Raj" position="PR & OUTREACH" branch="CSE" photo={akashpic} />
+                    </TeamMember>
                   </TeamMember>
                 </TeamMember>
               </div>
