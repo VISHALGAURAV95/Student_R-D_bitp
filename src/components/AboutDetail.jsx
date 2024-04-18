@@ -49,7 +49,7 @@ function AboutDetail() {
         {/* Grid layout to display team members */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-x-4 gap-y-4">
           {/* Root TeamMember */}
-          <TeamMember name="S.C. Pandey" branch="CSE" position="Professor" photo={scpandeypic}>
+          <TeamMember name="S.C. Pandey" branch="CSE" position="Professor Incharge R & D cell" photo={scpandeypic}>
             {/* First child column */}
             <div className="flex justify-between">
               <div>
@@ -57,7 +57,7 @@ function AboutDetail() {
                   {/* <TeamMember name="Divesh Kumar" position="PR and Outreach" photo={diveshpic} /> */}
                   <TeamMember name="Karan Kumar" position="Event Head" branch="IT" photo={karanpic}>
                   <TeamMember name="Madhuri Madhu" position="CONTENT HEAD" branch="CIVIL" photo={madhupic} >
-                  <TeamMember name="Saumya Shalini" position="PR & OUTREACH" branch="CIVIL" photo={soumyapic} />
+                  <TeamMember name="Saumya Shalini" position="PR & OUTREACH" branch="EEE" photo={soumyapic} />
                   </TeamMember>
                   </TeamMember>
                 </TeamMember>
