@@ -7,11 +7,13 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
+import HeroSection from './components/HeroSection'
 function App() {
   return (
     <Router>
       <div className="flex flex-col h-screen">
         <Header />
+        {/* <HeroSection/> */}
          {/* <Navigation />  */}
 
         <div className="flex-grow">
