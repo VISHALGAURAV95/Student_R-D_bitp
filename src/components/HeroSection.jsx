@@ -1,7 +1,11 @@
-import React from 'react';
+import React  from 'react';
 import 'tailwindcss/tailwind.css';
+// import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+   
+  
+
   return (
     <main className="relative overflow-hidden">
       <div className="absolute top-0 left-0 w-48 h-48 bg-grey-700 rounded-full opacity-25 animate-pulse"></div>
@@ -15,9 +19,14 @@ const HeroSection = () => {
             boundaries of knowledge and technology. Explore our latest projects
             and be part of the change.
           </p>
-          <button className="bg-white text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+          <a
+            href="https://forms.gle/Tf3a2AS2FBfV1hjN7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300"
+          >
             Join Us
-          </button>
+          </a>
         </div>
         <div className="imageSection md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64">
@@ -30,24 +39,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <div className="heroFooter flex justify-around py-8 bg-grey-700 shadow-lg">
-        <div className="flex flex-col items-center text-blue-600">
-          <i className="fa-solid fa-dice-d6 text-3xl mb-2"></i>
-          <span>Innovative</span>
-        </div>
-        <div className="flex flex-col items-center text-blue-600">
-          <i className="fa-solid fa-circle-dot text-3xl mb-2"></i>
-          <span>Collaborative</span>
-        </div>
-        <div className="flex flex-col items-center text-blue-600">
-          <i className="fa-solid fa-rotate text-3xl mb-2"></i>
-          <span>Dynamic</span>
-        </div>
-        <div className="flex flex-col items-center text-blue-600">
-          <i className="fa-solid fa-bars text-3xl mb-2"></i>
-          <span>Comprehensive</span>
-        </div>
-      </div>
+     
     </main>
   );
 };

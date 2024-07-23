@@ -1,3 +1,7 @@
+import React from "react";
+import { FaLinkedin } from "react-icons/fa";
+
+// Import your image assets
 import khusipic from "../assets/khusipic.jpg";
 import diveshpic from "../assets/diveshpic.jpg";
 import soumyapic from "../assets/saumyapic2.jpg";
@@ -11,29 +15,151 @@ import madhupic from "../assets/madhu.jpg";
 import harshpic from "../assets/Harsh_2.jpg";
 import scpandeypic from "../assets/scpandeypic.jpg";
 import akashpic from "../assets/akashpic.jpg";
-function TeamMember({ name, branch, position, photo, children }) {
+import vidishapic from "../assets/vidisha.jpeg";
+
+const teamMembers = [
+  {
+    name: "S.C. Pandey",
+    branch: "CSE",
+    position: "Professor Incharge R & D cell",
+    photo: scpandeypic,
+    LinkedIn: "",
+    priority: 1,
+  },
+  {
+    name: "Vaibhav Raj",
+    branch: "CSE",
+    position: "Founder || Design Lead",
+    photo: vaibhavpic,
+    LinkedIn: "https://www.linkedin.com/in/vaibhav-raj-1b8442214",
+    priority: 2,
+  },
+  {
+    name: "Vishal Gaurav",
+    branch: "CSE",
+    position: "Web Developer || Founder",
+    photo: vishalpic,
+    LinkedIn: "https://www.linkedin.com/in/vishal-gaurav-57a421241/",
+    priority: 2,
+  },
+  {
+    name: "Gauri Sinha",
+    branch: "ECE",
+    position: "Founder || Design Lead",
+    photo: gauripic,
+    LinkedIn: "https://www.linkedin.com/in/gauri-sinha-8ba1b0299/",
+    priority: 2,
+  },
+  {
+    name: "Vidisha Jahanvi",
+    branch: "CSE",
+    position: "Technical Lead",
+    photo: vidishapic,
+    LinkedIn: "https://www.linkedin.com/in/vidishajahanvi/",
+    priority: 2,
+  },
+  {
+    name: "Karan Kumar",
+    branch: "IT",
+    position: "Event Head",
+    photo: karanpic,
+    LinkedIn: "https://www.linkedin.com/in/karan-kumar-598124233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    priority: 4,
+  },
+  {
+    name: "Khushi Pathak",
+    branch: "IT",
+    position: "Event Head",
+    photo: khusipic,
+    LinkedIn: "https://www.linkedin.com/in/khushi-kumari-a9768a227",
+    priority: 4,
+  },
+  {
+    name: "Aman Kumar",
+    branch: "BBA",
+    position: "Event Head",
+    photo: amanpic,
+    LinkedIn: "",
+    priority: 4,
+  },
+  {
+    name: "Madhuri Madhu",
+    branch: "CIVIL",
+    position: "CONTENT HEAD & Design Lead",
+    photo: madhupic,
+    LinkedIn: "http://linkedin.com/in/madhuri-raj-732905271",
+    priority: 5,
+  },
+  {
+    name: "HARSH Raj",
+    branch: "CSE",
+    position: "CONTENT HEAD",
+    photo: harshpic,
+    LinkedIn: "",
+    priority: 5,
+  },
+  {
+    name: "Divyesh Kumar",
+    branch: "CSE",
+    position: "CONTENT HEAD",
+    photo: diveshpic,
+    LinkedIn: "",
+    priority: 5,
+  },
+  {
+    name: "Saumya Shalini",
+    branch: "EEE",
+    position: "Technical Lead & PR OUTREACH",
+    photo: soumyapic,
+    LinkedIn: "",
+    priority: 6,
+  },
+  {
+    name: "AKASH Raj",
+    branch: "CSE",
+    position: "PR & OUTREACH",
+    photo: akashpic,
+    LinkedIn: "",
+    priority: 6,
+  },
+  {
+    name: "Vaishnavi Raj",
+    branch: "IT",
+    position: "PR & OUTREACH",
+    photo: vaishnavipic,
+    LinkedIn: "https://www.linkedin.com/in/vaishnaviraj721",
+    priority: 6,
+  },
+];
+
+function TeamMember({ name, branch, position, photo, LinkedIn }) {
   return (
-    <div className="flex flex-col items-center bg-gray-800 text-white rounded-lg shadow-md p-2">
-      {/* Display the team member's photo */}
-      <div className="bg-gray-200 rounded-full h-16 w-16 md:h-24 md:w-24 flex items-center justify-center mb-2">
-        {/* Placeholder for the team member's photo */}
-        {photo ? (
-          <img src={photo} alt={name} className="rounded-full w-full h-full object-cover" />
-        ) : (
-          <span className="text-lg font-bold">{name} pic</span>
-        )}
+    <div className="group relative flex flex-col items-center justify-center bg-inherit rounded-full p-6 transition-all duration-500 transform hover:rounded-lg hover:scale-105 ">
+      <div className="w-32 h-32 mb-4 overflow-hidden rounded-full shadow-md">
+        <img src={photo} alt={name} className="w-full h-full object-cover" />
       </div>
-      <div className="text-center">
-        {/* Display the team member's name */}
-        <h2 className="text-base font-semibold md:text-lg">{name}</h2>
-        {/* Display the team member's branch */}
-        <h2 className="text-base font-semibold md:text-lg">{branch}</h2>
-        {/* Display the team member's position */}
-        <p className="text-sm text-gray-400">{position}</p>
-      </div>
-      <div className="mt-2 flex justify-evenly space-x-2 w-full">
-        {/* If the team member has children (nested team members), render them */}
-        {children}
+      <div className=" items-center justify-center p-4 bg-white bg-opacity-0 group-hover:bg-opacity-0 transition-opacity duration-500 rounded-lg">
+        <h3 className="text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          {name}
+        </h3>
+        <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          {branch}
+        </p>
+        <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          {position}
+        </p>
+        <div className="flex justify-center mt-3 space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          {LinkedIn && (
+            <a
+              href={LinkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-blue-400"
+            >
+              <FaLinkedin />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -41,53 +167,22 @@ function TeamMember({ name, branch, position, photo, children }) {
 
 function AboutDetail() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-800 text-white min-h-screen">
-      {/* Root component starts from the center of the page */}
-      <div className="container mx-auto py-8 justify-center">
-        {/* Title of the team section */}
-        <h1 className="text-2xl font-semibold text-center mb-4">Meet The Team</h1>
-        {/* Grid layout to display team members */}
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-x-4 gap-y-4">
-          {/* Root TeamMember */}
-          <TeamMember name="S.C. Pandey" branch="CSE" position="Professor Incharge R & D cell" photo={scpandeypic}>
-            {/* First child column */}
-            <div className="flex justify-between">
-              <div>
-                <TeamMember name="Vaibhav Raj" position="Founder || Design Lead" branch="CSE" photo={vaibhavpic}>
-                  {/* <TeamMember name="Divesh Kumar" position="PR and Outreach" photo={diveshpic} /> */}
-                  <TeamMember name="Karan Kumar" position="Event Head" branch="IT" photo={karanpic}>
-                  <TeamMember name="Madhuri Madhu" position="CONTENT HEAD" branch="CIVIL" photo={madhupic} >
-                  <TeamMember name="Saumya Shalini" position="PR & OUTREACH" branch="EEE" photo={soumyapic} />
-                  </TeamMember>
-                  </TeamMember>
-                </TeamMember>
-              </div>
-            </div>
-            {/* Second child column */}
-            <div className="flex justify-center">
-              <div>
-                <TeamMember name="Vishal Gaurav" position="Web Developer || Founder" branch="CSE" photo={vishalpic}>
-                  <TeamMember name="Khushi Pathak" position="Event Head" branch="IT" photo={khusipic}>
-                    <TeamMember name="HARSH Raj" position="CONTENT HEAD" branch="CSE" photo={harshpic} >
-                    <TeamMember name="AKASH Raj" position="PR & OUTREACH" branch="CSE" photo={akashpic} />
-                    </TeamMember>
-                  </TeamMember>
-                </TeamMember>
-              </div>
-            </div>
-            {/* Third child column */}
-            <div className="flex justify-center">
-              <div>
-                <TeamMember name="Gauri Sinha" position="Founder || Design Lead" branch="ECE" photo={gauripic}>
-                  <TeamMember name="Aman Kumar" position="Event Head" branch="BBA" photo={amanpic} >  
-                  <TeamMember name="Divyesh Kumar" position="CONTENT HEAD" branch="CSE" photo={diveshpic} > 
-                  <TeamMember name="Vaishnavi Raj" position="PR & OUTREACH" branch="IT" photo={vaishnavipic} />
-                    </TeamMember> 
-                  </TeamMember>
-                </TeamMember>
-              </div>
-            </div>
-          </TeamMember>
+    <div className="flex flex-col items-center justify-center bg-gray-800 text-white min-h-screen py-10">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-center mb-12">Meet The Team</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {teamMembers
+            .sort((a, b) => a.priority - b.priority) // Sort by priority
+            .map((member) => (
+              <TeamMember
+                key={member.name}
+                name={member.name}
+                branch={member.branch}
+                position={member.position}
+                photo={member.photo}
+                LinkedIn={member.LinkedIn} 
+              />
+            ))}
         </div>
       </div>
     </div>
