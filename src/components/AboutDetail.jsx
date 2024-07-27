@@ -134,21 +134,15 @@ const teamMembers = [
 
 function TeamMember({ name, branch, position, photo, LinkedIn }) {
   return (
-    <div className="group relative flex flex-col items-center justify-center bg-inherit rounded-full p-6 transition-all duration-500 transform hover:rounded-lg hover:scale-105 ">
+    <div className="group relative flex flex-col items-center justify-center bg-inherit rounded-lg p-6">
       <div className="w-32 h-32 mb-4 overflow-hidden rounded-full shadow-md">
         <img src={photo} alt={name} className="w-full h-full object-cover" />
       </div>
-      <div className=" items-center justify-center p-4 bg-white bg-opacity-0 group-hover:bg-opacity-0 transition-opacity duration-500 rounded-lg">
-        <h3 className="text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          {name}
-        </h3>
-        <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          {branch}
-        </p>
-        <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          {position}
-        </p>
-        <div className="flex justify-center mt-3 space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      <div className="items-center justify-center p-4">
+        <h3 className="text-lg font-semibold">{name}</h3>
+        <p className="text-sm">{branch}</p>
+        <p className="text-sm">{position}</p>
+        <div className="flex justify-center mt-3 space-x-3">
           {LinkedIn && (
             <a
               href={LinkedIn}
@@ -166,23 +160,35 @@ function TeamMember({ name, branch, position, photo, LinkedIn }) {
 }
 
 function AboutDetail() {
+  const [highlightedMember, ...otherMembers] = teamMembers.sort(
+    (a, b) => a.priority - b.priority
+  ); // Sort by priority
+
   return (
     <div className="flex flex-col items-center justify-center bg-gray-800 text-white min-h-screen py-10">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-12">Meet The Team</h1>
+        <div className="flex justify-center mb-10">
+          <TeamMember
+            key={highlightedMember.name}
+            name={highlightedMember.name}
+            branch={highlightedMember.branch}
+            position={highlightedMember.position}
+            photo={highlightedMember.photo}
+            LinkedIn={highlightedMember.LinkedIn}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {teamMembers
-            .sort((a, b) => a.priority - b.priority) // Sort by priority
-            .map((member) => (
-              <TeamMember
-                key={member.name}
-                name={member.name}
-                branch={member.branch}
-                position={member.position}
-                photo={member.photo}
-                LinkedIn={member.LinkedIn} 
-              />
-            ))}
+          {otherMembers.map((member) => (
+            <TeamMember
+              key={member.name}
+              name={member.name}
+              branch={member.branch}
+              position={member.position}
+              photo={member.photo}
+              LinkedIn={member.LinkedIn}
+            />
+          ))}
         </div>
       </div>
     </div>
